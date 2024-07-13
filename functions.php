@@ -12,8 +12,8 @@ if(!defined("WPTB_DIR_URI")){
 //print_r(WPTB_DIR_PATH);
 require_once WPTB_DIR_PATH . '/inc/helpers/autoloader.php';
 
-function WPTB_get_theme_instance()
+function wptb_get_theme_instance()
 {
     \WPTB_THEME\Inc\WPTB_THEME::get_instance();
 }
-WPTB_get_theme_instance();
+wptb_get_theme_instance();
