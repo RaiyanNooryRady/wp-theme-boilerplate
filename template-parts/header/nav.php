@@ -3,8 +3,22 @@
  * Navigation template
  * @package WPTB
  */
-// $menu_class = WPTB_THEME\Inc\Menus::get_instance();
-// $header_menu_id = $menu_class->get_menu_id('wptb-header-menu');
-// $header_menus = wp_get_nav_menu_items($header_menu_id);
 ?>
-<h1>hello nav</h1>
+<h1>Navbar Functionality</h1>
+<?php if (function_exists('the_custom_logo')) {
+      the_custom_logo();
+    } 
+
+    if(has_nav_menu('wptb-header-menu')){
+      wp_nav_menu([
+          'theme_location'=>'wptb-header-menu',
+          'container'=>'',
+          'depth'=> 0,
+          'items_wrap'=>'<ul class="navbar-nav ms-auto">%3$s</ul>',
+          'fallback_cb'       => 'wp_bootstrap_navwalker::fallback',
+          'walker'            => new WP_Bootstrap_Navwalker()
+
+      ]);
+  }
+    
+  ?>

@@ -11,6 +11,8 @@ if(!defined("WPTB_DIR_URI")){
 }
 //print_r(WPTB_DIR_PATH);
 require_once WPTB_DIR_PATH . '/inc/helpers/autoloader.php';
+//add wp_bootstrap_navwalker.php file
+require_once 'wp_bootstrap_navwalker.php';
 
 function wptb_get_theme_instance()
 {
