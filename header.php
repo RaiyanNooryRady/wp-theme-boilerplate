@@ -18,4 +18,4 @@
     if (function_exists('wp_body_open')) {
         wp_body_open();
     } ?>
- <h1>header</h1>
+<?php get_template_part('template-parts/header/nav'); ?>
